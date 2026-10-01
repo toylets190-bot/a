@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santa Clara Esporte Clube | Site Oficial</title>
+  <meta name="description" content="Portal oficial do Santa Clara Esporte Clube — O Terror do Vale. Notícias, ingressos, programa de sócio, elenco e jogos. Subestimado por muitos. Temido no Vale." />
+  <meta property="og:title" content="Santa Clara Esporte Clube | Site Oficial" />
+  <meta property="og:description" content="O portal oficial do Lobo do Vale. Estádio Vale de Santa Clara — A Toca do Lobo." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><polygon points='50,0 100,0 100,70 50,100 0,70 0,0' fill='%231a3a6b'/><text x='50%' y='62%' font-size='32' font-weight='900' fill='white' text-anchor='middle'>SCEC</text></svg>" />
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="field-bg" data-page="socio">
+
+  <!-- SPRITE DE ÍCONES SVG (substitui emojis genéricos da interface) -->
+  <svg style="position:absolute; width:0; height:0; overflow:hidden;" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+    <symbol id="i-ticket" viewBox="0 0 24 24"><path d="M2 9a2 2 0 012-2h16a2 2 0 012 2v2a2 2 0 000 4v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2a2 2 0 000-4z"/><line x1="10" y1="7" x2="10" y2="17" stroke-dasharray="2 2"/></symbol>
+    <symbol id="i-seat" viewBox="0 0 24 24"><path d="M6 4v9a2 2 0 002 2h8a2 2 0 002-2V4"/><line x1="4" y1="20" x2="20" y2="20"/><line x1="6" y1="15" x2="6" y2="20"/><line x1="18" y1="15" x2="18" y2="20"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" stroke="none"/><polyline points="21 15 16 10 5 21"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  </svg>
+
+  <!-- TOPBAR INSTITUCIONAL -->
+  <div class="topbar">
+    <div class="container">
+      <div>Site Oficial do Santa Clara Esporte Clube • Santa Clara — MG</div>
+      <div class="topbar-nav">
+        <a href="estadio.html">Estádio</a>
+        <a href="torcida.html">Matilha</a>
+        <a href="historia.html">História</a>
+        <a href="clube.html#comunidade">Comunidade</a>
+        <button id="themeToggleBtn" style="background:none;border:none;cursor:pointer;color:inherit;font-size:0.75rem;text-transform:uppercase;margin-left:12px;"><svg class="icon"><use href="#i-moon"></use></svg> Tema</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER PRINCIPAL FIXO -->
+  <header class="main-header" id="mainHeader">
+    <div class="container header-content">
+      <div class="logo-badge" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <div class="shield">
+          <img class="club-crest-img" src="https://i.imgur.com/HWoq88J.png" alt="Escudo Santa Clara EC" data-base-url="https://i.imgur.com/HWoq88J" data-fallback-exts="jpg,jpeg,webp,gif" onerror="clubCrestFallback(this)">
+          <span class="club-crest-text" style="display:none;">SCEC</span>
+        </div>
+        <div class="logo-text">
+          <h1>SANTA CLARA</h1>
+          <span>Esporte Clube • Fundado em 2000</span>
+        </div>
+      </div>
+
+      <nav class="desktop-nav">
+        <a href="index.html">Início</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="jogos.html">Jogos</a>
+        <a href="elenco.html">Elenco</a>
+        <a href="tabela.html">Tabela</a>
+        <a href="vou-ao-jogo.html">Vou ao Jogo</a>
+        <a href="ingressos.html">Ingressos</a>
+        <a href="socio.html" class="active">Sócio</a>
+        <a href="loja.html">Loja</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn-icon" id="searchTriggerBtn" title="Buscar (/)"><svg class="icon"><use href="#i-search"></use></svg></button>
+        <button class="btn-icon" id="notificationsTriggerBtn" title="Notificações">
+          <svg class="icon"><use href="#i-bell"></use></svg>
+          <span class="badge-count" id="notifBadge">3</span>
+        </button>
+        <button class="btn-icon" id="cartTriggerBtn" title="Carrinho">
+          <svg class="icon"><use href="#i-bag"></use></svg>
+          <span class="badge-count" id="cartCountBadge">0</span>
+        </button>
+        <button class="btn-outline" id="fanAreaBtn">🐺 Meu Clube</button>
+        <button class="btn-primary" onclick="goSection('ingressos')">
+          <svg class="icon"><use href="#i-ticket"></use></svg> Ingressos
+        </button>
+        <button class="menu-toggle" id="mobileMenuBtn" aria-label="Menu"><svg class="icon" style="width:1.4em;height:1.4em;"><use href="#i-menu"></use></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="toggleMobileMenu()">Início</a>
+    <a href="noticias.html" onclick="toggleMobileMenu()">Notícias</a>
+    <a href="jogos.html" onclick="toggleMobileMenu()">Jogos & Calendário</a>
+    <a href="elenco.html" onclick="toggleMobileMenu()">Elenco Profissional</a>
+    <a href="tabela.html" onclick="toggleMobileMenu()">Classificação</a>
+    <a href="tabela.html#regulamento" onclick="toggleMobileMenu()">Regulamento Oficial</a>
+    <a href="elenco.html#estatisticas" onclick="toggleMobileMenu()">Estatísticas Avançadas</a>
+    <a href="estadio.html" onclick="toggleMobileMenu()">Estádio Vale de Santa Clara</a>
+    <a href="vou-ao-jogo.html" onclick="toggleMobileMenu()">Vou ao Jogo</a>
+    <a href="estadio.html#guia-acesso" onclick="toggleMobileMenu()">Guia de Acesso ao Estádio</a>
+    <a href="ingressos.html" onclick="toggleMobileMenu()">Comprar Ingressos</a>
+    <a href="jogos.html#transmissao" onclick="toggleMobileMenu()">Transmissão & Onde Assistir</a>
+    <a href="socio.html" onclick="toggleMobileMenu()">Seja Sócio</a>
+    <a href="loja.html" onclick="toggleMobileMenu()">Loja Oficial</a>
+    <a href="clube.html#comunidade" onclick="toggleMobileMenu()">Comunidade</a>
+    <a href="torcida.html" onclick="toggleMobileMenu()">A Matilha (jogos e votações)</a>
+    <a href="jogos.html" onclick="toggleMobileMenu()">Escalação Provável</a>
+    <a href="jogos.html#simulador" onclick="toggleMobileMenu()">Simulador da Rodada</a>
+    <a href="jogos.html#calendario" onclick="toggleMobileMenu()">Próximos Jogos</a>
+    <a href="torcida.html#arena" onclick="toggleMobileMenu()">Arena da Matilha</a>
+    <a href="torcida.html#missoes" onclick="toggleMobileMenu()">Missões e Ranking</a>
+    <a href="clube.html#patrocinadores" onclick="toggleMobileMenu()">Patrocinadores</a>
+    <a href="clube.html" onclick="toggleMobileMenu()">Diretoria e Gestão</a>
+    <a href="historia.html" onclick="toggleMobileMenu()">História & Troféus</a>
+    <button class="btn-primary" style="width: 100%; margin-top: 20px;" onclick="openFanAreaModal(); toggleMobileMenu();">🐺 Meu Clube</button>
+  </div>
+
+  <!-- PAINEL DE NOTIFICAÇÕES -->
+  <div class="notifications-drawer" id="notificationsDrawer">
+    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--club-border); padding-bottom:8px; margin-bottom:12px;">
+      <h6 style="text-transform:uppercase; font-size:0.75rem; color:var(--club-gold);">Central de Avisos</h6>
+      <span style="font-size:0.65rem; color:var(--club-muted);">3 novas</span>
+    </div>
+    <div id="notificationsList" style="display:flex; flex-direction:column; gap:10px; font-size:0.8rem;"></div>
+  </div>
+
+  <main id="inicio">
+
+    <section id="socio" style="background-color: var(--club-dark); border-top:1px solid var(--club-border);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-title">
+            <span class="section-pretitle">Faça Parte da Matilha</span>
+            <h2 class="section-main-title">Seja Sócio do Santa Clara</h2>
+          </div>
+        </div>
+
+        <div id="socioRoot"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:40px; padding: 24px; border: 1px solid var(--club-border); border-radius:var(--radius-lg); background: var(--club-card);">
+        <p style="font-family:var(--font-display); font-size:1.2rem; color:var(--club-accent); letter-spacing:3px; text-transform:uppercase;">SUBESTIMADO POR MUITOS. TEMIDO NO VALE.</p>
+        <p style="margin-top:8px; color:var(--club-muted); font-size:0.85rem;">"Na cidade é estádio. Para o Santa Clara, é território."</p>
+      </div>
+
+      <div class="footer-grid">
+        <div>
+          <div class="logo-badge" style="margin-bottom: 16px;">
+            <div class="shield">
+              <img class="club-crest-img" src="https://i.imgur.com/HWoq88J.png" alt="Escudo Santa Clara EC" data-base-url="https://i.imgur.com/HWoq88J" data-fallback-exts="jpg,jpeg,webp,gif" onerror="clubCrestFallback(this)">
+              <span class="club-crest-text" style="display:none;">SCEC</span>
+            </div>
+            <div class="logo-text">
+              <h1>SANTA CLARA</h1>
+              <span>Esporte Clube • 2000</span>
+            </div>
+          </div>
+          <p style="font-size: 0.85rem; max-width: 320px; line-height: 1.6;">
+            O maior clube de Santa Clara e uma das principais referências futebolísticas do Vale do Jequitinhonha. SAF — Sociedade Anônima do Futebol.
+          </p>
+          <div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
+            <span style="font-size:0.65rem; padding:3px 8px; border:1px solid var(--club-border); border-radius:3px; color:var(--club-muted);">Banco ValeMais</span>
+            <span style="font-size:0.65rem; padding:3px 8px; border:1px solid var(--club-border); border-radius:3px; color:var(--club-muted);">JequiLog</span>
+            <span style="font-size:0.65rem; padding:3px 8px; border:1px solid var(--club-border); border-radius:3px; color:var(--club-muted);">MinasNet</span>
+            <span style="font-size:0.65rem; padding:3px 8px; border:1px solid var(--club-border); border-radius:3px; color:var(--club-muted);">Sertão Energia</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Institucional</h5>
+          <ul>
+            <li><a href="noticias.html">Notícias</a></li>
+            <li><a href="estadio.html">Estádio</a></li>
+            <li><a href="vou-ao-jogo.html">Vou ao Jogo</a></li>
+            <li><a href="estadio.html#guia-acesso">Guia de Acesso ao Estádio</a></li>
+            <li><a href="historia.html">História & Troféus</a></li>
+            <li><a href="clube.html">Diretoria e Gestão</a></li>
+            <li><a href="elenco.html">Elenco Profissional</a></li>
+            <li><a href="tabela.html#regulamento">Regulamento Oficial</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Torcedor</h5>
+          <ul>
+            <li><a href="ingressos.html">Bilheteria Digital</a></li>
+            <li><a href="socio.html">Programa de Sócios</a></li>
+            <li><a href="loja.html">Loja Oficial</a></li>
+            <li><a href="jogos.html#transmissao">Onde Assistir</a></li>
+            <li><a href="elenco.html#estatisticas">Estatísticas</a></li>
+            <li><a href="javascript:void(0)" onclick="openFanAreaModal()">Área Meu Clube</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Comunidade</h5>
+          <ul>
+            <li><a href="clube.html#comunidade">Projetos Sociais</a></li>
+            <li><a href="clube.html#comunidade">Voluntariado</a></li>
+            <li><a href="clube.html#patrocinadores">Patrocinadores</a></li>
+            <li><a href="javascript:void(0)">Terror do Vale</a></li>
+            <li><a href="javascript:void(0)">Copa do Vale</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Santa Clara Esporte Clube • Vale do Jequitinhonha — MG • Projeto Esportivo Fictício.</span>
+        <span>HTML5 + CSS3 + JS Puro</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       MODAIS
+       ======================================================== -->
+
+  <!-- Modal: Busca Global -->
+  <div class="modal-overlay" id="searchModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('searchModal')">✕</button>
+      <h3 style="font-family:var(--font-display); font-size:1.6rem; text-transform:uppercase; margin-bottom:16px;">Busca — Santa Clara EC</h3>
+      <input type="text" id="globalSearchInput" placeholder="Jogadores, notícias, produtos..." class="form-control" oninput="executeSearch(this.value)" />
+      <div id="searchResults" style="margin-top:20px; display:flex; flex-direction:column; gap:8px;"></div>
+    </div>
+  </div>
+
+  <!-- Modal: Carrinho -->
+  <div class="modal-overlay" id="cartModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('cartModal')">✕</button>
+      <h3 style="font-family:var(--font-display); font-size:1.6rem; text-transform:uppercase; margin-bottom:16px;">Meu Carrinho</h3>
+      <div id="cartItemsContainer" style="display:flex; flex-direction:column; gap:12px; margin-bottom:20px;"></div>
+      <div style="border-top:1px solid var(--club-border); padding-top:12px; display:flex; justify-content:space-between; align-items:center;">
+        <span style="font-weight:700;">Subtotal:</span>
+        <span id="cartTotalPrice" style="font-family:var(--font-display); font-size:1.4rem; color:var(--club-gold);">R$ 0,00</span>
+      </div>
+      <button class="btn-primary" style="width:100%; margin-top:16px; justify-content:center;" onclick="handleStoreCheckout()">Concluir Pedido Simulado</button>
+    </div>
+  </div>
+
+  <!-- Modal: Meu Clube -->
+  <div class="modal-overlay" id="fanAreaModal">
+    <div class="modal-card" style="max-width: 650px;">
+      <button class="modal-close" onclick="closeModal('fanAreaModal')">✕</button>
+      <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--club-border); padding-bottom:12px; margin-bottom:16px;">
+        <h3 style="font-family:var(--font-display); font-size:1.6rem; text-transform:uppercase;">Painel • Meu Clube</h3>
+        <span id="fanPointsBadge" style="background:var(--club-accent); color:white; font-weight:800; padding:4px 10px; border-radius:var(--radius-sm); font-size:0.75rem;">1.250 PONTOS SCEC</span>
+      </div>
+
+      <div class="digital-wallet-card" id="digitalWallet">
+        <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+          <div>
+            <span style="font-size:0.65rem; color:var(--club-gold); font-weight:800; text-transform:uppercase; letter-spacing:1px;">Carteira Oficial de Sócio</span>
+            <h4 style="font-family:var(--font-display); font-size:1.2rem; color:white;" id="walletPlanName">Sócio Terror</h4>
+          </div>
+          <div class="wallet-chip"></div>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:flex-end;">
+          <div>
+            <div style="font-size:0.65rem; color:var(--club-muted); text-transform:uppercase;">Nome do Sócio</div>
+            <strong id="walletUserName" style="font-size:0.95rem; color:white;">Torcedor Lobo</strong>
+            <div style="font-size:0.65rem; font-family:monospace; color:var(--club-muted); margin-top:4px;" id="walletUserCode">SCEC-2026-0001</div>
+          </div>
+          <div id="walletQr" style="background:white; padding:4px; border-radius:4px;"></div>
+        </div>
+      </div>
+
+      <div style="margin-top:24px;">
+        <h5 style="text-transform:uppercase; font-size:0.8rem; color:var(--club-muted); margin-bottom:8px;">Seus Ingressos Comprados</h5>
+        <div id="userPurchasedTickets" style="font-size:0.85rem; display:flex; flex-direction:column; gap:8px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Adesão ao Sócio -->
+  <div class="modal-overlay" id="membershipModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('membershipModal')">✕</button>
+      <h3 style="font-family:var(--font-display); font-size:1.6rem; text-transform:uppercase; margin-bottom:8px;" id="joinPlanTitle">Adesão ao Sócio</h3>
+      <p style="color:var(--club-muted); font-size:0.8rem; margin-bottom:16px;">Preencha seus dados para emitir sua carteirinha instantânea.</p>
+      <form onsubmit="handleJoinMembership(event)" style="display:flex; flex-direction:column; gap:12px;">
+        <div class="form-group">
+          <label>Nome Completo</label>
+          <input type="text" id="memberJoinName" required class="form-control" />
+        </div>
+        <div class="form-group">
+          <label>E-mail</label>
+          <input type="email" id="memberJoinEmail" required class="form-control" />
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%; justify-content:center; padding:12px;">Confirmar Adesão</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal Genérico (notícia / jogador / partida) -->
+  <div class="modal-overlay" id="genericDetailModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeModal('genericDetailModal')">✕</button>
+      <div id="genericModalContent"></div>
+    </div>
+  </div>
+
+  <!--
+    Painel de Personalização — ACESSO OCULTO (não há link visível no site público)
+    Para abrir: pressione Ctrl+Alt+P em qualquer página, ou acesse a URL terminando em #admin
+    (ex.: seusite.com/index.html#admin). Veja a função openAdminPanel() no fim do JS.
+  -->
+  <div class="modal-overlay" id="adminModal">
+    <div class="modal-card admin-panel-card">
+      <button class="modal-close" onclick="closeModal('adminModal')" style="z-index:2;">✕</button>
+
+      <div class="admin-panel-header">
+        <div class="shield admin-panel-shield">
+          <img class="club-crest-img" src="https://i.imgur.com/HWoq88J.png" alt="Escudo Santa Clara EC" data-base-url="https://i.imgur.com/HWoq88J" data-fallback-exts="jpg,jpeg,webp,gif" onerror="clubCrestFallback(this)">
+          <span class="club-crest-text" style="display:none;">SCEC</span>
+        </div>
+        <div>
+          <span class="section-pretitle" style="margin-bottom:2px;">Painel Restrito • Acesso da Diretoria</span>
+          <h3 style="font-family:var(--font-display); font-size:1.5rem; text-transform:uppercase; letter-spacing:-0.5px; color:white;">Central de Personalização</h3>
+          <p style="color:rgba(255,255,255,0.6); font-size:0.78rem; margin-top:4px;">Preços, escudos e elenco — as alterações ficam salvas neste navegador.</p>
+        </div>
+      </div>
+
+      <div class="admin-panel-body">
+        <nav class="admin-sidebar" id="adminTabs">
+          <button class="admin-sidebar-btn active" onclick="showAdminTab('Precos')"><span>💰</span> Preços dos Setores</button>
+          <button class="admin-sidebar-btn" onclick="showAdminTab('Escudo')"><span>🐺</span> Escudo do Clube</button>
+          <button class="admin-sidebar-btn" onclick="showAdminTab('Times')"><span>🛡️</span> Times do Mineiro II</button>
+          <button class="admin-sidebar-btn" onclick="showAdminTab('Jogadores')"><span>👤</span> Elenco / Jogadores</button>
+        </nav>
+
+        <div class="admin-content">
+          <div id="adminTabPrecos" class="admin-tab-panel"></div>
+          <div id="adminTabEscudo" class="admin-tab-panel" style="display:none;"></div>
+          <div id="adminTabTimes" class="admin-tab-panel" style="display:none;"></div>
+          <div id="adminTabJogadores" class="admin-tab-panel" style="display:none;"></div>
+        </div>
+      </div>
+
+      <div class="admin-panel-footer">
+        <button class="btn-outline" style="flex:1; justify-content:center;" onclick="resetSiteSettings()">↺ Restaurar Padrão</button>
+        <button class="btn-primary" style="flex:1; justify-content:center;" onclick="saveSiteSettings()">💾 Salvar Alterações</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="adminToast" class="admin-toast"></div>
+
+  <!-- Modal: Guia de Acesso — Stepper -->
+  <div class="modal-overlay" id="guideStepperModal">
+    <div class="modal-card" style="max-width:760px;">
+      <button class="modal-close" onclick="closeModal('guideStepperModal')">✕</button>
+      <div class="guide-breadcrumb">
+        <button onclick="goSection('guia-acesso'); closeModal('guideStepperModal');">Estádio</button>
+        › Guia de Acesso › <span id="guideBreadcrumbSector"></span>
+      </div>
+      <div class="guide-progress" id="guideProgress"></div>
+      <div class="guide-photo-wrap" id="guidePhotoWrap"></div>
+      <h4 id="guideStepTitle" style="margin-bottom:6px;"></h4>
+      <p id="guideStepText" style="color:var(--club-muted); font-size:0.88rem;"></p>
+      <div class="guide-stepper-nav">
+        <button class="btn-outline" id="guidePrevBtn" onclick="prevGuideStep()">‹ Anterior</button>
+        <button class="btn-outline" onclick="backToSectorSelect()">Ver Todos os Setores</button>
+        <button class="btn-primary" id="guideNextBtn" onclick="nextGuideStep()">Próximo ›</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Lightbox de fotos -->
+  <div class="modal-overlay" id="lightboxModal">
+    <div class="modal-card" style="max-width:92vw; background:transparent; border:none; box-shadow:none; text-align:center; padding:0;">
+      <button class="modal-close" style="top:-36px; right:0; color:white;" onclick="closeModal('lightboxModal')">✕</button>
+      <img id="lightboxImg" style="max-width:100%; max-height:82vh; border-radius:8px;" alt="Foto ampliada">
+      <p id="lightboxCaption" style="color:white; margin-top:10px; font-size:0.85rem;"></p>
+    </div>
+  </div>
+
+
+  <!-- ===== AUTENTICAÇÃO ===== -->
+  <div class="modal-overlay" id="authModal">
+    <div class="modal-card" style="max-width:460px;">
+      <button class="modal-close" onclick="closeModal('authModal')" aria-label="Fechar">✕</button>
+      <h3 style="font-family:var(--font-display); font-size:1.6rem; text-transform:uppercase;">🐺 Acesso da Matilha</h3>
+      <div class="auth-tabs" role="tablist">
+        <button type="button" id="authTabLogin" onclick="socAuthTab('login')">Entrar</button>
+        <button type="button" id="authTabRegister" onclick="socAuthTab('register')">Criar conta</button>
+      </div>
+      <div id="authNotice" class="auth-notice" style="display:none;"></div>
+
+      <form id="authLogin" onsubmit="socLogin(event)" novalidate>
+        <div class="form-group"><label for="authLoginEmail">E-mail</label><input type="email" id="authLoginEmail" class="form-control" autocomplete="username" required></div>
+        <div class="form-group"><label for="authLoginPass">Senha</label>
+          <div class="auth-pass"><input type="password" id="authLoginPass" class="form-control" autocomplete="current-password" required><button type="button" onclick="socTogglePass('authLoginPass',this)" aria-label="Mostrar senha">👁</button></div></div>
+        <div class="auth-row"><label style="display:flex;gap:6px;align-items:center;cursor:pointer;"><input type="checkbox" id="authRemember" checked> Manter conectado por 30 dias</label><button type="button" class="auth-link" onclick="socAuthTab('recover')">Esqueci a senha</button></div>
+        <div class="auth-err" id="authLoginErr" role="alert"></div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:12px;">Entrar</button>
+      </form>
+
+      <form id="authRegister" onsubmit="socRegister(event)" novalidate style="display:none;">
+        <div class="form-group"><label for="authRegName">Nome completo</label><input type="text" id="authRegName" class="form-control" autocomplete="name" required></div>
+        <div class="form-group"><label for="authRegEmail">E-mail</label><input type="email" id="authRegEmail" class="form-control" autocomplete="email" required></div>
+        <div class="form-group"><label for="authRegDoc">CPF ou documento</label><input type="text" id="authRegDoc" class="form-control" placeholder="Usado na recuperação de senha" required><div class="auth-hint">Site fictício: pode usar um documento de teste.</div></div>
+        <div class="form-group"><label for="authRegPass">Senha</label>
+          <div class="auth-pass"><input type="password" id="authRegPass" class="form-control" autocomplete="new-password" oninput="socMeter(this.value)" required><button type="button" onclick="socTogglePass('authRegPass',this)" aria-label="Mostrar senha">👁</button></div>
+          <div class="auth-meter"><i id="authMeterBar"></i></div><div class="auth-hint" id="authMeterTxt">Mínimo 8 caracteres, com letras e números.</div></div>
+        <div class="form-group"><label for="authRegPass2">Confirmar senha</label><input type="password" id="authRegPass2" class="form-control" autocomplete="new-password" required></div>
+        <label style="display:flex;gap:8px;font-size:0.78rem;margin-bottom:12px;cursor:pointer;"><input type="checkbox" id="authTerms"> Aceito os termos de uso e a política de privacidade da Matilha.</label>
+        <div class="auth-err" id="authRegErr" role="alert"></div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:12px;">Criar minha conta (+100 pontos)</button>
+      </form>
+
+      <form id="authRecover" onsubmit="socRecover(event)" novalidate style="display:none;">
+        <p style="font-size:0.8rem;color:var(--club-muted);margin-bottom:12px;">Confirme seu e-mail e o documento cadastrado para definir uma nova senha. (Recuperação simulada: este site não envia e-mails.)</p>
+        <div class="form-group"><label for="authRecEmail">E-mail</label><input type="email" id="authRecEmail" class="form-control" required></div>
+        <div class="form-group"><label for="authRecDoc">CPF ou documento cadastrado</label><input type="text" id="authRecDoc" class="form-control" required></div>
+        <div class="form-group"><label for="authRecPass">Nova senha</label><input type="password" id="authRecPass" class="form-control" autocomplete="new-password" required></div>
+        <div class="auth-err" id="authRecErr" role="alert"></div>
+        <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:12px;">Redefinir senha</button>
+        <p style="text-align:center;margin-top:12px;"><button type="button" class="auth-link" onclick="socAuthTab('login')">← Voltar ao login</button></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== ÁREA DO SÓCIO ===== -->
+  <div class="modal-overlay" id="memberAreaModal">
+    <div class="modal-card ma-card">
+      <button class="modal-close" onclick="closeModal('memberAreaModal')" aria-label="Fechar">✕</button>
+      <h3 style="font-family:var(--font-display); font-size:1.7rem; text-transform:uppercase;">Área do Sócio</h3>
+      <div class="ma-tabs" id="maTabs"></div>
+      <div id="maBody"></div>
+    </div>
+  </div>
+  <div class="soc-toast" id="socToast" role="status" aria-live="polite"></div>
+
+
+  <script src="data/db.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/multipage.js"></script>
+</body>
+</html>
